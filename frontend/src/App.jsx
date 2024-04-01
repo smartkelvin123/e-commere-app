@@ -8,6 +8,7 @@ import {
 import Home from "./component/Home";
 import Navbar from "./component/Navbar";
 import Cart from "./component/Cart";
+import "./App.css";
 
 function App() {
   return (
