@@ -4,10 +4,12 @@ import {
   Route,
   Routes,
   BrowserRouter,
+  // Navigate,
 } from "react-router-dom";
 import Home from "./component/Home";
 import Navbar from "./component/Navbar";
 import Cart from "./component/Cart";
+import Notfound from "./component/Notfound";
 import "./App.css";
 
 function App() {
@@ -15,8 +17,10 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" exact element={<Home />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/not-found" element={<Notfound />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </BrowserRouter>
   );
