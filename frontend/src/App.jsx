@@ -10,6 +10,7 @@ import Home from "./component/Home";
 import Navbar from "./component/Navbar";
 import Cart from "./component/Cart";
 import Notfound from "./component/Notfound";
+
 import "./App.css";
 
 function App() {
