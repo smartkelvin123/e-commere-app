@@ -1,8 +1,15 @@
 import React from "react";
 import { useGetAllProductsQuery } from "../features/productApi";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cartSlice";
 
 const Home = () => {
+  const dispatch = useDispatch();
   const { data, isLoading, isError } = useGetAllProductsQuery();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <div className="home-container">
@@ -22,7 +29,9 @@ const Home = () => {
                   <span>{product.desc}</span>
                   <span className="price">{product.price}</span>
                 </div>
-                <button>Add to Cart</button>
+                <button onClick={() => handleAddToCart(product)}>
+                  Add to Cart
+                </button>
               </div>
             ))}
           </div>
