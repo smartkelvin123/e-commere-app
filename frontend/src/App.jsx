@@ -10,12 +10,15 @@ import Home from "./component/Home";
 import Navbar from "./component/Navbar";
 import Cart from "./component/Cart";
 import Notfound from "./component/Notfound";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
+      <ToastContainer />
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Home />} />
