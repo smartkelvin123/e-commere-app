@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const products = require("./products");
 require("dotenv").config();
+const register = require("./routes/register");
 
 const app = express();
 app.use(cors());
@@ -17,6 +18,8 @@ app.get("/", (req, res) => {
 app.get("/products", (req, res) => {
   res.send(products);
 });
+
+app.use("/api/register", register);
 
 const port = process.env.PORT || 5000;
 const uri = process.env.DB_URL;

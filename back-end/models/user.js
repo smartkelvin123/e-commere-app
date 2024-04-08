@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     minLength: 3,
-    maxLength: 50,
+    maxLength: 200,
     unique: true,
   },
   password: {
@@ -21,5 +21,8 @@ const userSchema = new mongoose.Schema({
     maxLength: 1024,
   },
 });
-
 module.exports = mongoose.model("User", userSchema);
+
+// const User = mongoose.model("User", userSchema);
+
+// module.exports = User;
