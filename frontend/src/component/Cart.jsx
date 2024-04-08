@@ -4,9 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
   // clearCart,
-  // decreaseCart,
-  // getTotals,
   removeFromCart,
+  decreaseCart,
 } from "../features/cartSlice";
 
 import { Link } from "react-router-dom";
@@ -23,12 +22,12 @@ const Cart = () => {
     dispatch(getTotals());
   }, [cart, dispatch]);
 
-  // const handleAddToCart = (product) => {
-  //   dispatch(addToCart(product));
-  // };
-  // const handleDecreaseCart = (product) => {
-  //   dispatch(decreaseCart(product));
-  // };
+  const handleAddToCart = (cartItem) => {
+    dispatch(addToCart(cartItem));
+  };
+  const handleDecreaseCart = (cartItem) => {
+    dispatch(decreaseCart(cartItem));
+  };
   const handleRemoveFromCart = (cartItem) => {
     dispatch(removeFromCart(cartItem));
   };
