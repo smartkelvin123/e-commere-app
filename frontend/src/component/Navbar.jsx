@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import styled from "styled-components";
+// import styled from "styled-components";
 // import { logoutUser } from "../slices/authSlice";
 import { toast } from "react-toastify";
 
@@ -61,23 +61,23 @@ const NavBar = () => {
 
 export default NavBar;
 
-const AuthLinks = styled.div`
-  a {
-    &:last-child {
-      margin-left: 2rem;
-    }
-  }
-`;
+// const AuthLinks = styled.div`
+//   a {
+//     &:last-child {
+//       margin-left: 2rem;
+//     }
+//   }
+// `;
 
-const Links = styled.div`
-  color: white;
-  display: flex;
+// const Links = styled.div`
+//   color: white;
+//   display: flex;
 
-  div {
-    cursor: pointer;
+//   div {
+//     cursor: pointer;
 
-    &:last-child {
-      margin-left: 2rem;
-    }
-  }
-`;
+//     &:last-child {
+//       margin-left: 2rem;
+//     }
+//   }
+// `;
