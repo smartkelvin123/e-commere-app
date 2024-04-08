@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
-  // clearCart,
+  clearCart,
   removeFromCart,
   decreaseCart,
+  getTotals,
 } from "../features/cartSlice";
 
 import { Link } from "react-router-dom";
@@ -31,9 +32,9 @@ const Cart = () => {
   const handleRemoveFromCart = (cartItem) => {
     dispatch(removeFromCart(cartItem));
   };
-  // const handleClearCart = () => {
-  //   dispatch(clearCart());
-  // };
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
   return (
     <div className="cart-container">
       <h2>Shopping Cart</h2>
