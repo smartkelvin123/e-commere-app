@@ -50,10 +50,12 @@ const NavBar = () => {
           </div>
         </Links>
       ) : (
-        <AuthLinks>
+        // <AuthLinks>
+        <div>
           <Link to="/login">Login</Link>
           <Link to="register">Register</Link>
-        </AuthLinks>
+        </div>
+        // </AuthLinks>
       )}
     </nav>
   );

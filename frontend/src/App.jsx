@@ -12,6 +12,7 @@ import Cart from "./component/Cart";
 import Notfound from "./component/Notfound";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Register from "./auth/register";
 
 import "./App.css";
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/not-found" element={<Notfound />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </BrowserRouter>
