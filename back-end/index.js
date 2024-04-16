@@ -6,6 +6,7 @@ const products = require("./products");
 require("dotenv").config();
 const register = require("./routes/register");
 const login = require("./routes/login");
+const stripe = require("./routes/stripes");
 
 const app = express();
 app.use(cors());
@@ -22,6 +23,7 @@ app.get("/api/products", (req, res) => {
 
 app.use("/api/register", register);
 app.use("/api/login", login);
+app.use("/api/stripe", stripe);
 
 const port = process.env.PORT || 5000;
 const uri = process.env.DB_URL;
