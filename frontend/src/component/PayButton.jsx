@@ -13,6 +13,7 @@ const PayButton = ({ cartItems }) => {
       })
       .then((response) => {
         if (response.data.url) {
+          //this will take to check-out page
           window.location.href = response.data.url;
         }
       })

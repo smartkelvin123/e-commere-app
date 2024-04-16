@@ -1,4 +1,3 @@
-import react from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -14,6 +13,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Register from "./auth/register";
 import Login from "./auth/login";
+import CheckoutSuccess from "./component/CheckoutSuccess";
 
 import "./App.css";
 
@@ -26,6 +26,7 @@ function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/not-found" element={<Notfound />} />
+        <Route path="/checkout-success" element={<CheckoutSuccess />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<Notfound />} />
