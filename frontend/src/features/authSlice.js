@@ -8,6 +8,7 @@ const initialState = {
   name: "",
   email: "",
   _id: "",
+  isAdmin: "",
   registerStatus: "",
   registerError: "",
   loginStatus: "",
