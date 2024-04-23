@@ -69,7 +69,7 @@ router.post("/create-checkout-session", async (req, res) => {
             currency: "usd",
           },
           display_name: "Next day air",
-          // Delivers in exactly 1 business day
+
           delivery_estimate: {
             minimum: {
               unit: "business_day",
@@ -186,7 +186,5 @@ router.post(
     res.status(200).end();
   }
 );
-
-
 
 module.exports = router;
